@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        .boardbox {
+            margin: 0vh;
+        }
+
+        img {
+            width: 150%;
+            margin-left: -12px;
+            margin-bottom: 20%;
+        }
+
+        .col-md-1 {
+            height: 12vh;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body onload="getSquares()">
+    <div class="container-fluid" style="height: 100vh; background-color:aqua;">
+        <div>
+        </div>
+        <div class="row">
+            <div class="container-fluid boardbox col-md-9 offset-md-3" style="margin-top: 2vh;" id="boardbox"></div>
+        </div>
+        <div>
+            <span id="report"></span>
+            <button class="btn btn-lg btn-primary btn-block" onclick="resetGame()">
+                reset
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
