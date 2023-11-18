@@ -1,0 +1,12 @@
+.boardbox{
+    margin: 0vh;
+}
+img{
+    width: 150%;
+    margin-left: -12px;
+    margin-bottom: 20%;
+}
+.col-md-1{
+    height: 12vh;
+    cursor: pointer;
+}

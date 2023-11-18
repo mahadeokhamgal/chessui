@@ -119,9 +119,10 @@ function allowDrop(event) {
 }
 
 function drag(event) {
-    console.log("drag called");
+    
     startSquare = event.target.parentNode.id;
     startParent = event.target.parentNode.parentNode.id;
+    console.log("drag called", startSquare, startParent);
     event.dataTransfer.setData("pieceInTransit", event.target.id);
 }
 function dragover(event) {

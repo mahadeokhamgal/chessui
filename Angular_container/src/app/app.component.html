@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    ** Welcome to Angular {{ title }} App **
+  </h1>
+</div>
+
+<main>
+    <div>
+      <ul>
+        <li><a routerLink="/board_ui">board_ui</a></li>
+        <li><a routerLink="/child2">Angular child 2</a></li>
+        <li><a routerLink="/child3">React child 3</a></li>
+        <li><a routerLink="/child4">React remote child 4</a></li>
+        <li><a routerLink="/child5">Vue child 5</a></li>
+      </ul>
+    </div>
+
+  <section class="child-app">
+    <router-outlet></router-outlet>
+  </section>
+</main>
