@@ -1,15 +1,23 @@
 <!-- <router-outlet></router-outlet> -->
-
-<div class="container-fluid" style="height: 100vh; background-color:aqua;">
-  <div>
-  </div>
-  <div class="row">
-      <div class="container-fluid boardbox col-md-9 offset-md-3" style="margin-top: 2vh;" id="boardbox"></div>
-  </div>
-  <div>
-      <span id="report"></span>
-      <button class="btn btn-lg btn-primary btn-block" onclick="resetGame()">
-          reset
-      </button>
-  </div>
+<div class="container-fluid" style="height: 100vh; width: 100vw;">
+    <div>
+    </div>
+    <div class="row">
+        <div class="container-fluid boardbox col-md-9" style="margin-top: 2vh;" id="boardbox">
+            <div class="row" id="index" *ngFor="let item of [].constructor(8); let i = index">
+                <div id="{{i + '' + j}}" class="col-md-1 board_cell"
+                    [ngClass]="(i%2 == 0 && j%2 == 0) || (i%2 != 0 && j%2 != 0) ? 'positive' : 'negative'"
+                    (drop) = "drop($event);" (dragover)="allowDrop($event);"
+                    *ngFor="let item of [].constructor(8); let j = index">
+                    <!-- <img *ngIf="piceAvail(i+''+j)" src="{{getPieceUrl(i+''+j)}}" class="W" id ="RW1" (dragstart) = "drag($event)"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <span id="report"></span>
+        <button class="btn btn-lg btn-primary btn-block" (click)="resetGame()">
+            reset
+        </button>
+    </div>
 </div>
